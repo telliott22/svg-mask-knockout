@@ -1,0 +1,26 @@
+.utility-text-align-center{
+  text-align: center;
+}
+
+.utility-text-align-left{
+  text-align: left;
+}
+
+.utility-margin-bottom-huge{
+  @media(min-width: $large){
+    margin-bottom: rem(40px);
+  }
+  margin-bottom: rem(130px);
+}
+
+.utility-border-top{
+  border-top: $faint-border;
+}
+
+.utility-border-bottom{
+  border-bottom: $faint-border;
+}
+
+.utility-fade-in{
+  animation: 1s fadeIn forwards 1 ease;
+}

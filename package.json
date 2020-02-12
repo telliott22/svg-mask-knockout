@@ -1,0 +1,24 @@
+{
+  "name": "voice-command-demo",
+  "version": "1.0.0",
+  "description": "My polished Nuxt.js project",
+  "author": "Tim Elliott",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "animejs": "^3.1.0",
+    "cross-env": "^5.2.0",
+    "locomotive-scroll": "^3.2.9",
+    "node-sass": "^4.11.0",
+    "nuxt": "^2.4.0",
+    "sass-loader": "^7.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}

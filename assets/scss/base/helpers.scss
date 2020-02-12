@@ -1,0 +1,179 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+
+
+/*--------------------------------------------------------------
+# Background Classes
+--------------------------------------------------------------*/
+.bg {
+
+	&--white {
+		background-color: $white;
+	}
+	&--smoke {
+		background-color: $smoke;
+	}
+	&--blue {
+		background-color: $blue;
+		color: $alt-text-color;
+	}
+	&--teal {
+		background-color: $teal;
+		color: $alt-text-color;
+	}
+	&--green {
+		background-color: $green;
+		color: $alt-text-color;
+	}
+	&--orange {
+		background-color: $orange;
+		color: $alt-text-color;
+	}
+	&--purple {
+		background-color: $purple;
+		color: $alt-text-color;
+	}
+	&--yellow {
+		background-color: $yellow;
+	}
+}
+
+/*--------------------------------------------------------------
+# Alignment
+--------------------------------------------------------------*/
+.align {
+
+	&-mobile--left {
+		text-align: left;
+	}
+	&-mobile--right {
+		text-align: right;
+	}
+	&-mobile--center {
+		text-align: center;
+	}
+
+	@media screen and (min-width: $medium) {
+		&--left {
+			text-align: left;
+		}
+		&--right {
+			text-align: right;
+		}
+		&--center {
+			text-align: center;
+		}
+
+		&-heading--left .block__header__heading,
+		&-heading--left.block__header__heading {
+			text-align: left;
+		}
+		&-heading--right .block__header__heading,
+		&-heading--right.block__header__heading {
+			text-align: right;
+		}
+		&-heading--center .block__header__heading,
+		&-heading--center.block__header__heading {
+			text-align: center;
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+# Misc
+--------------------------------------------------------------*/
+.table-wrap {
+	display: table;
+}
+
+.valign {
+	position: relative;
+
+	.valign-inner {
+		position: absolute;
+		top: 50%;
+		transform: translateY(50%);
+	}
+}
+
+.flex {
+	display: flex;
+}
+
+.valign-flex {
+	display: flex;
+	align-items: center;
+}
+
+.flex-justify {
+	display: flex;
+	justify-content: space-between;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+.padded {
+	padding-left: $base-padding / 3;
+	padding-right: $base-padding / 3;
+
+	@media (min-width: $small) {
+		padding-left: $base-padding / 2;
+		padding-right: $base-padding / 2;
+	}
+
+	@media (min-width: $medium) {
+		padding-left: $base-padding;
+		padding-right: $base-padding;
+	}
+
+	&--right{
+		padding-right: 0;
+
+		@media (min-width: $medium) {
+			padding-right: $base-padding * 2;
+		}
+	}
+}
+
+.padded-v {
+	padding-top: $base-padding;
+	padding-bottom: $base-padding;
+}

@@ -1,0 +1,10 @@
+header.site-header {
+	@include clearfix();
+	padding: rem(40px) 0;
+	z-index: 15;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+}

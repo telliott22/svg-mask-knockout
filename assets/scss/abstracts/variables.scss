@@ -1,0 +1,126 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// Basic Colours
+$white: #ffffff;
+$black: #2f2f35;
+$lightblack: #333333;
+$grey: #888888;
+$lightgrey: #f8f8f8;
+$darkgrey: #2f2f35;
+$darkestgrey: #29292d;
+$silver: #8d8da1;
+$smoke: #f8f8f8;
+$red: #c25656;
+$green: #2a4d44;
+$yellow: #ffd500;
+$purple: #aa00ff;
+$teal: #00c2ff;
+$blue: #4050fb;
+$darkblue: #071851;
+$light-brown: #cdc0b9;
+
+$peach: #f2e9e3;
+$rust: #b15727;
+$dark-brown: #130a06;
+$orange: #e79d32;
+$gold: #9d6f4d;
+$brown: #662513;
+
+// Site Defaults
+$brand-primary: $orange;
+$brand-primary-contrast: $teal;
+
+$primary-background: $dark-brown;
+$secondary-background: $green;
+
+$transition-background: $dark-brown;
+
+// Defaults
+$text-color: $black;
+$alt-text-color: $white;
+$base-padding: 35px;
+$bubble-shadow: rem(11px) rem(11px) rem(33px) rgba(0, 0, 0, 0.05);
+$bubble-shadow-left: rem(-11px) rem(11px) rem(33px) rgba(0, 0, 0, 0.25);
+$bubble-shadow-down: rem(0px) rem(11px) rem(33px) rgba(0, 0, 0, 0.25);
+$bubble-shadow-sm: rem(11px) rem(11px) rem(33px) rgba(0, 0, 0, 0.3);
+$bubble-shadow-sm-left: rem(-11px) rem(5px) rem(33px) rgba(0, 0, 0, 0.3);
+$shadow: rem(11px) rem(21px) rem(66px) rgba(0, 0, 0, 0.25);
+$shadow-light: rem(11px) rem(21px) rem(66px) rgba(0, 0, 0, 0.15);
+$shadow-reverse: rem(-11px) rem(21px) rem(66px) rgba(0, 0, 0, 0.25);
+
+/// Letter spacing
+$letter-spacing-text: 0em;
+$letter-spacing-heading: 1.5px;
+$letter-spacing-special: 2px;
+$letter-spacing-normal: 1px;
+
+/// Regular font family
+$text-font-stack: "gf_founders_sans_web",
+"Helvetica Neue",
+"Helvetica",
+"Arial",
+sans-serif !default;
+
+/// Header font family
+$header-font-stack: "gf_modernlight",
+"Helvetica Neue",
+"Helvetica",
+"Arial",
+sans-serif !default;
+
+$bold-font-stack: "gf_modernbold",
+"Helvetica Neue",
+"Helvetica",
+"Arial",
+sans-serif !default;
+
+$italic-font-stack: gf_founders_scriptlight;
+
+// Breakpoints
+$small: 569px;
+$medium: 769px;
+$large: 960px;
+$xlarge: 1260px;
+$xxlarge: 1441px;
+$super: 2000px;
+$xsuper: 2500px;
+
+$mobile-breakpoint: $large;
+
+/// CSS Easing Functions
+/// @type String
+$ease-in-out-circ: cubic-bezier(0.72, 0.01, 0.13, 1);
+$ease-in-out-quad: cubic-bezier(0.54, 0.01, 0.5, 1);
+$ease-in-out-sexy: cubic-bezier(0.4, 0, 0.2, 1);
+$ease-long-tail: cubic-bezier(0.03, 0.79, 0.29, 1);
+$ease-swing: cubic-bezier(0.03, 0.79, 0.29, 1);
+$bounce-in: cubic-bezier(0.83, -0.29, 0.17, 1.77);
+$ease-in-out-flash: cubic-bezier(0.3, 1.08, 0.67, 0.78);
+
+/// Common SVG shape data URIs
+/// Save the full SVG code only in variables. Can be used for simple or
+/// complicated SVGs, but probably more useful for simple ones.
+/// For colourless (black) SVG icons, remove the fill color hex code
+/// but don't remove the rule or the semicolon after –
+/// e.g. <style type="text/css">.st0{fill:#FFFFFF;}</style> becomes
+/// <style type="text/css">.st0{fill:;}</style>.
+/// If your SVG doesn't have a style attribute, you can generate them
+/// everywhere they need to be by opening it in illustrator and changing
+/// the color to white.
+/// If you aren't going to be changing the color of the SVG with CSS
+/// or the SVG has multiple colors you can skip this step and leave
+/// the code as it is.
+///
+/// @type String
+/// @see {function} svg-url
+$svg-arrow-right: '<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 62.9 75.7" style="enable-background:new 0 0 62.9 75.7;" xml:space="preserve"><style type="text/css">.st0{fill:;}</style><polygon class="st0" points="0,0 62.9,37.9 0,75.7 "/></svg>';
+$svg-arrow-down: '<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 75.7 62.9" style="enable-background:new 0 0 75.7 62.9;" xml:space="preserve"><style type="text/css">.st0{fill:;}</style><polygon class="st0" points="75.7,0 37.9,62.9 0,0 "/></svg>';
+$svg-arrow-up: '<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 75.7 62.9" style="enable-background:new 0 0 75.7 62.9;" xml:space="preserve"><style type="text/css">.st0{fill:;}</style><polygon class="st0" points="0,62.9 37.9,0 75.7,62.9 "/></svg>';
+$svg-arrow-left: '<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 62.9 75.7" style="enable-background:new 0 0 62.9 75.7;" xml:space="preserve"><style type="text/css">.st0{fill:;}</style><polygon class="st0" points="62.9,75.7 0,37.9 62.9,0 "/></svg>';
+$svg-chevron-right: '<svg width="18px" height="31px" viewBox="208 0 18 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style type="text/css">.st0{fill:;}</style><polygon class="st0" stroke="none" transform="translate(217.233633, 15.000000) scale(-1, 1) translate(-217.233633, -15.000000) " points="216.499895 22.5000106 209 15.0000201 216.500105 7.50001007 224.00021 0 224.733738 0.733526532 225.467265 1.46705271 218.68989 8.24453316 211.912514 15.0220133 218.678776 21.7883815 225.445038 28.554748 224.722414 29.2773723 223.99979 30 216.499895 22.5000106"></polygon></svg>';
+$svg-chevron-left: '<svg width="17px" height="31px" viewBox="159 0 17 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style type="text/css">.st0{fill:;}</style><polygon class="st0" stroke="none" points="166.499895 22.5000106 159 15.0000201 166.500105 7.50001007 174.00021 0 174.733738 0.733526532 175.467265 1.46705271 168.68989 8.24453316 161.912514 15.0220133 168.678776 21.7883815 175.445038 28.554748 174.722414 29.2773723 173.99979 30 166.499895 22.5000106"></polygon></svg>';
+$svg-chevron-down: '<svg viewBox="0 0 30 16.5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style type="text/css">.st0{fill:;}</style><polygon class="st0" stroke="none" points="22.5,9 15,16.5 7.5,9 0,1.5 0.7,0.7 1.5,0 8.2,6.8 15,13.6 21.8,6.8 28.6,0 29.3,0.7 30,1.5 "></polygon></svg>';
+
+$faint-border: 1px solid rgba($alt-text-color, 0.2);

@@ -1,0 +1,53 @@
+#rootSvg {
+  height: 100%;
+  width: 100%;
+}
+
+svg {
+  position: relative;
+
+  rect {
+    height: 100%;
+  }
+
+  .circle-container {
+    height: 100%;
+    width: 100%;
+  }
+
+  #curve {
+    transform: translate(50%, 50%);
+  }
+
+  #circle {
+    transform: translate(50%, 50%);
+    // r: 30;
+  }
+
+  #textPath {
+    transform-origin: center;
+  }
+
+  #barcode {
+    width: 200px;
+  }
+
+  .text-container {
+    transform: translate(50px, 75px)
+  }
+
+  #bottomRightText {
+    text {
+      font-size: 30px;
+    }
+
+    transform: translate(82%, 98%) rotate(-90deg)
+  }
+
+  text {
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+  }
+
+}

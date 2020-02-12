@@ -1,0 +1,18 @@
+.vdp-datepicker__calendar .cell.selected, .vdp-datepicker__calendar .cell.selected.highlighted, .vdp-datepicker__calendar .cell.selected:hover{
+  background: $brand-primary !important;
+  color: $brand-primary-contrast !important;
+}
+
+.vdp-datepicker__calendar{
+  width: 100% !important;
+}
+
+.v-select .dropdown-toggle{
+  border: none !important;
+  // border-bottom: 1px solid $border-grey;
+  border-radius: 0 !important;
+}
+
+.v-select.single .selected-tag{
+  position: absolute !important;
+}

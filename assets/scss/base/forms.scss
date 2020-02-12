@@ -1,0 +1,170 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+    -webkit-transition-delay: 9999s;
+}
+
+textarea,
+.StripeElement,
+.modal .v-select,
+input[type=text],
+input[type=email],
+input[type=date],
+input[type=url],
+input[type=password],
+input[type=number] {
+	padding: rem(20px) rem(20px) rem(18px);
+	border: none;
+	outline: none;
+	background: $white;
+	position: relative;
+	border-bottom: rem(2px) solid $white;
+	color: $text-color;
+	transition: color 0.2s;
+	margin: 0;
+	width: 100%;
+	display: block;
+	border-radius: 0;
+	-webkit-appearance: none;
+
+	~ .highlight {
+		height: rem(2px);
+		transition: right 0.2s $ease-long-tail;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 100%;
+		background: $blue;
+	}
+
+	&:focus {
+		outline: 0;
+		color: $text-color;
+
+		~ .highlight {
+			transition: right 0.7s $ease-long-tail;
+			right: 0;
+		}
+	}
+
+	&.error {
+
+	}
+}
+
+textarea {
+	min-height: rem(200px);
+}
+
+.form-input {
+	position: relative;
+	margin-bottom: rem(15px);
+	flex: 1 0 100%;
+	max-width: 100%;
+
+  &--half{
+    flex: 1 0 calc(50% - 15px);
+  	max-width: calc(50% - 15px);
+  }
+
+  &--margin-bottom{
+    margin-bottom: rem(40px);
+  }
+
+	@media (min-width: $medium) {
+		&--textarea {
+			max-width: 100%;
+		}
+	}
+
+	label {
+		color: $alt-text-color;
+		display: block;
+		text-align: left;
+    text-transform: uppercase;
+    @include fontSize(10px);
+    letter-spacing: $letter-spacing-special;
+    font-weight: bold;
+    margin-bottom: 4px;
+	}
+
+	span.error {
+		font-size: 10px;
+		position: absolute;
+		bottom: -5px;
+		transform: translateY(100%);
+		display: block;
+		width: 100%;
+		text-align: right;
+		color: $lightgrey;
+		letter-spacing: 0.5px;
+	}
+
+	&.animated {
+		padding-top: rem(10px);
+		z-index: 1;
+
+		label {
+			position: absolute;
+			top: calc(50% + 5px);
+			left: rem(20px);
+			width: 100%;
+			transform: translateY(-50%);
+			transition: all 0.5s $ease-long-tail;
+			color: $lightgrey;
+			pointer-events: none;
+		}
+
+		textarea + label {
+			top: rem(40px);
+		}
+
+		textarea,
+		input {
+			&:focus + label,
+			&.dirty + label {
+				top: rem(-5px);
+				left: 0;
+				color: $blue;
+				font-weight: bold;
+				@include fontSize(12px);
+			}
+		}
+		input.dirty[aria-invalid=false] + label {
+			/* color: $green; */
+		}
+	}
+}
+
+.form {
+	width: 100%;
+  padding: rem(30px) 0;
+	&__input-wrapper {
+    display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+    .button{
+      width: 100%;
+      padding: rem(20px);
+
+      @media(min-width: $mobile-breakpoint){
+        padding: rem(30px);
+      }
+    }
+	}
+
+	&-error {
+  	color: $red;
+    display: block;
+    font-size: 12px;
+    float: right;
+	}
+
+	&--centered {
+		text-align: center;
+	}
+
+}

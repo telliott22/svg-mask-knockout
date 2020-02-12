@@ -1,0 +1,96 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  // add a quick fade in on body to fix flash of prerendered content
+  opacity: 0;
+  animation: 0.5s 0.5s 1 forwards fadeIn;
+  background-color: $primary-background;
+  &.noscroll {
+    overflow: hidden;
+  }
+}
+
+#app {
+  position: relative;
+  overflow: hidden;
+  left: 0;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: $alt-text-color;
+  display: inline-block;
+  line-height: normal;
+  transition: color 0.2s ease-out, box-shadow 0.2s ease-out;
+  box-shadow: inset 0 -5px 0 transparent;
+  padding: 0 rem(2px);
+  margin: 0 rem(-2px);
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: normal;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    box-shadow: inset 0 -2px 0 rgba($white, 0.15);
+    outline: none;
+  }
+
+  .white {
+    color: white;
+  }
+}
+
+/**
+ * Basic styles for blockquotes
+ */
+blockquote {
+}
+blockquote:before {
+}
+blockquote p {
+}
+
+/**
+ * Basic styles for horizontal rules
+ */
+hr {
+}
+
+/**
+ * Basic styles for iframes
+ */
+iframe {
+}
+
+/**
+ * Basic styles for code blocks
+ */
+code,
+pre {
+}
+pre code {
+}
+pre {
+}
+
+* {
+  -webkit-overflow-scrolling: touch;
+}
