@@ -1,7 +1,7 @@
 {
-  "name": "voice-command-demo",
+  "name": "svg-mask-knockout",
   "version": "1.0.0",
-  "description": "My polished Nuxt.js project",
+  "description": "SVG mask knockout effect concept",
   "author": "Tim Elliott",
   "private": true,
   "scripts": {

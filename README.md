@@ -1,10 +1,10 @@
-# voice-command-demo
+# svg-mask-knockout
 
-> My polished Nuxt.js project
+> SVG mask knockout effect concept
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ npm install
 
