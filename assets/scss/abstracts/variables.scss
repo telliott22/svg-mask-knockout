@@ -57,18 +57,12 @@ $letter-spacing-special: 2px;
 $letter-spacing-normal: 1px;
 
 /// Regular font family
-$text-font-stack: "gf_founders_sans_web",
-"Helvetica Neue",
-"Helvetica",
-"Arial",
-sans-serif !default;
+$text-font-stack: 'Lilita One',
+cursive !default;
 
 /// Header font family
-$header-font-stack: "gf_modernlight",
-"Helvetica Neue",
-"Helvetica",
-"Arial",
-sans-serif !default;
+$header-font-stack:'Lilita One',
+cursive;
 
 $bold-font-stack: "gf_modernbold",
 "Helvetica Neue",

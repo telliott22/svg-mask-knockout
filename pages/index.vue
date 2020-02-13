@@ -1,5 +1,12 @@
 <template>
-  <main class="page">
+  <main
+    id="js-scroll"
+    class="page"
+  >
+
+    <div class="page__background-container">
+
+    </div>
 
     <div class="page__svg-container">
 
@@ -55,18 +62,13 @@
               height="100%"
               x="0"
               y="0"
-              class="text-container"
+              id="headerText"
             >
               <text
                 x="0"
                 y="0"
                 fill="#000"
-              >Excepteur sint</text>
-              <text
-                x="0"
-                y="55"
-                fill="#000"
-              >cupidatat laborum</text>
+              >{{headerText}}</text>
 
             </g>
 
@@ -274,51 +276,118 @@
 
 <script>
 import anime from "animejs/lib/anime.es.js";
+import LocomotiveScroll from "locomotive-scroll";
 
 export default {
-  methods: {},
-  mounted() {
-    let circle = document.getElementById("circle");
-    let pathText = document.getElementById("textPath");
-
-    let timeline = anime.timeline({ loop: true, autoplay: true });
-
-    let circleRadius = 190;
-
-    let circleBBox = circle.getBBox();
-    timeline
-      .add({
-        targets: circle,
-        r: [0, circleRadius],
-        easing: "easeInOutQuad",
-        duration: 1000,
-        complete: function(anim) {
-          // circleBBox = circle.getBBox();
-        }
-      })
-      .add({
-        targets: circle,
-        r: [circleRadius, 0],
-        easing: "easeInOutQuad",
-        duration: 1000,
-        delay: 1000
+  data() {
+    return {
+      scrollLimit: null,
+      scrollPercentage: null,
+      timeline: null,
+      headerText: "Timothy Elliott"
+    };
+  },
+  methods: {
+    initScroll() {
+      const scroll = new LocomotiveScroll({
+        el: document.querySelector("#js-scroll")
+        // smooth: true
       });
 
-    let pathTextTimeline = anime.timeline({ loop: true, autoplay: true });
+      let $this = this;
 
-    console.log(pathText);
-    pathTextTimeline.add({
-      targets: pathText,
-      rotate: 360,
-      easing: "linear",
-      duration: 10000
-    });
-    // .add({
-    //   targets: pathText,
-    //   scale: ,
-    //   easing: "easeInOutQuad",
-    //   duration: 1000
-    // });
+      scroll.on("scroll", scroll => {
+        // Using modularJS
+        // this.call(...func);
+
+        if (this.scrollLimit !== scroll.limit) {
+          this.scrollLimit = scroll.limit;
+        }
+
+        console.log(scroll.scroll.y);
+        console.log(this.scrollLimit);
+
+        this.scrollPercentage = (100 * scroll.scroll.y) / this.scrollLimit;
+
+        this.timeline.seek(
+          (this.scrollPercentage / 100) * this.timeline.duration
+        );
+      });
+    },
+    initSVG() {
+      let circle = document.getElementById("circle");
+      let pathText = document.getElementById("textPath");
+
+      //Wrap each header letter in a tspan
+      let headerText = document.querySelector("#headerText text");
+
+      headerText.innerHTML = headerText.textContent.replace(
+        /\S/g,
+        "<tspan class='letter'>$&</tspan>"
+      );
+
+      let headerTextLetters = document.querySelectorAll(".letter");
+
+      let barcodeBars = document.querySelectorAll("#barcode0 rect");
+
+      console.log(barcodeBars);
+
+      //Init timeline
+      this.timeline = anime.timeline({ autoplay: false });
+
+      let circleRadius = 190;
+
+      // let circleBBox = circle.getBBox();
+
+      this.timeline
+        .add({
+          targets: headerTextLetters,
+          opacity: [0, 1],
+          easing: "easeInOutQuad",
+          delay: anime.stagger(100),
+          duration: 500
+        })
+        .add({
+          targets: circle,
+          r: [0, circleRadius],
+          easing: "easeInOutQuad",
+          duration: 1000
+        })
+        .add({
+          targets: pathText,
+          opacity: [0, 1],
+          scale: [0, 1],
+          easing: "linear",
+          duration: 300
+        })
+        .add({
+          targets: pathText,
+          rotate: 360,
+          easing: "linear",
+          duration: 10000,
+          offset: "-350"
+        })
+        .add({
+          targets: barcodeBars,
+          // translateX: [200, 0],
+          opacity: [0, 1],
+          easing: "easeOutCubic",
+          duration: 800
+          // offset: "+500"
+        })
+        .add({
+          targets: circle,
+          r: [circleRadius, 0],
+          easing: "easeInOutQuad",
+          duration: 1000,
+          delay: 1000,
+          offset: "-400"
+        });
+    }
+  },
+  mounted() {
+    this.initScroll();
+    this.initSVG();
   }
 };
 </script>
