@@ -117,7 +117,7 @@ export default {
   watch: {
     countdown(newVal) {
       if (newVal === "00:00") {
-        alert("OVER");
+        alert("Better luck next time");
         this.stopTimer();
       }
     }
@@ -247,6 +247,7 @@ export default {
           duration: 1000,
           complete: anim => {
             document.onmousemove = this.onmousemove;
+            document.ontouchmove = this.onmousemove;
 
             $this.startTimer(120);
           }

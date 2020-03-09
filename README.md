@@ -1,6 +1,8 @@
-# svg-mask-knockout
+# svg-mask-knockout-wheres-wally
 
-> SVG mask knockout effect concept
+> Basic Where's Wally game made using SVG mask knockout effect concept.
+
+[demo](https://wheres-wally.now.sh/)
 
 ## Build Setup
 
