@@ -2,6 +2,8 @@
 
 > SVG mask knockout effect concept. Scroll for animations
 
+[demo](https://svg-mask-knockout.now.sh/)
+
 ## Build Setup
 
 ```bash
