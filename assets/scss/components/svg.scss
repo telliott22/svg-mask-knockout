@@ -12,7 +12,7 @@ svg {
 
   text {
     font-size: 50px;
-    font-family: 'Lilita One', cursive;
+    font-family: "Lilita One", cursive;
     text-transform: uppercase;
   }
 
@@ -26,7 +26,6 @@ svg {
   }
 
   #circle {
-    transform: translate(50%, 50%);
     // r: 30;
   }
 
@@ -34,25 +33,43 @@ svg {
     transform-origin: center;
   }
 
-  #barcode {
-    width: 200px;
+  #countdown {
+    transform: translate(20px, calc(100% - 20px));
+    font-size: 50px;
+
+    @media (min-width: $medium) {
+      transform: translate(50px, calc(100% - 50px));
+      font-size: 100px;
+    }
   }
 
   #headerText {
-    transform: translate(50px, 100px);
+    transform: translate(20px, 50px);
 
     text {
-      font-size: 80px;
+      font-size: 30px;
+    }
+
+    @media (min-width: $medium) {
+      transform: translate(50px, 100px);
+
+      text {
+        font-size: 80px;
+      }
     }
   }
 
   #bottomRightText {
     text {
-      font-size: 30px;
+      font-size: 20px;
     }
 
-    transform: translate(82%, 98%) rotate(-90deg)
+    @media (min-width: $medium) {
+      text {
+        font-size: 30px;
+      }
+    }
+
+    transform: translate(82%, 98%) rotate(-90deg);
   }
-
-
 }

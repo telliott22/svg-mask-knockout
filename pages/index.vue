@@ -1,274 +1,76 @@
 <template>
   <main
-    id="js-scroll"
     class="page"
+    :class="{'page--game-finished' :gameFinished}"
   >
 
-    <div class="page__background-container">
+    <div
+      class="page__background-container"
+      id="background"
+    >
 
-    </div>
+      <div class="page__svg-container">
 
-    <div class="page__svg-container">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="100%"
+          width="100%"
+          id="rootSvg"
+        >
 
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        height="100%"
-        width="100%"
-        id="rootSvg"
-      >
-
-        <defs>
-          <mask
-            id="mask"
-            x="0"
-            y="0"
-            height="100%"
-            width="100%"
-          >
-            <rect
+          <defs>
+            <mask
+              id="mask"
               x="0"
               y="0"
-              fill="#fff"
-            />
+              height="100%"
+              width="100%"
+            >
+              <rect
+                x="0"
+                y="0"
+                fill="#fff"
+              />
 
-            <svg>
+              <circle
+                id="circle"
+                alignment-baseline="center"
+                :style="circleStyles"
+              />
 
-              <g id="textPath">
-
-                <path
-                  id="curve"
-                  d="M.314 212.744C-117.214 212.744-212.587 117.371-212.587-.157S-117.214-213.059.314-213.059 213.216-117.685 213.216-.157 117.842 212.744.314 212.744Z"
-                  class="transparent"
-                />
-                <text>
-                  <textPath
-                    alignment-baseline="top"
-                    xlink:href="#curve"
-                  >
-                    Working at DarkBlue in Shoreditch
-                  </textPath>
-                </text>
+              <g
+                height="100%"
+                x="0"
+                y="0"
+                id="headerText"
+              >
+                <text
+                  x="0"
+                  y="0"
+                  fill="#000"
+                >{{headerText}}</text>
 
               </g>
 
-            </svg>
-
-            <circle
-              id="circle"
-              alignment-baseline="center"
-            />
-
-            <g
-              height="100%"
-              x="0"
-              y="0"
-              id="headerText"
-            >
               <text
                 x="0"
                 y="0"
                 fill="#000"
-              >{{headerText}}</text>
+                id="countdown"
+              >02:00</text>
 
-            </g>
+            </mask>
+          </defs>
 
-            <g
-              height="100%"
-              x="0"
-              y="0"
-              id="bottomRightText"
-            >
+          <rect
+            x="0"
+            y="0"
+            mask="url(#mask)"
+            fill="#000"
+          />
+        </svg>
 
-              <svg
-                xmlns:svg="http://www.w3.org/2000/svg"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 300 300"
-                version="1.0"
-                width="300"
-                height="200"
-                id="barcode"
-              >
-                <defs id="defs4" />
-                <g
-                  transform="translate(-319.65842,411.94414)"
-                  id="layer1"
-                >
-                  <g
-                    transform="matrix(11.791045,0,0,11.791045,2942.2704,3871.1998)"
-                    id="barcode0"
-                    style="fill:#000000"
-                  >
-                    <rect
-                      width="1"
-                      height="38"
-                      x="-222"
-                      y="-363"
-                      id="barcode0_bar1"
-                    />
-                    <rect
-                      width="1"
-                      height="38"
-                      x="-220"
-                      y="-363"
-                      id="barcode0_bar3"
-                    />
-                    <rect
-                      width="1"
-                      height="30"
-                      x="-218"
-                      y="-363"
-                      id="barcode0_bar5"
-                    />
-                    <rect
-                      width="4"
-                      height="30"
-                      x="-216"
-                      y="-363"
-                      id="barcode0_bar7"
-                    />
-                    <rect
-                      width="2"
-                      height="30"
-                      x="-211"
-                      y="-363"
-                      id="barcode0_bar9"
-                    />
-                    <rect
-                      width="1"
-                      height="30"
-                      x="-206"
-                      y="-363"
-                      id="barcode0_bar11"
-                    />
-                    <rect
-                      width="2"
-                      height="30"
-                      x="-204"
-                      y="-363"
-                      id="barcode0_bar13"
-                    />
-                    <rect
-                      width="3"
-                      height="30"
-                      x="-201"
-                      y="-363"
-                      id="barcode0_bar15"
-                    />
-                    <rect
-                      width="4"
-                      height="30"
-                      x="-197"
-                      y="-363"
-                      id="barcode0_bar17"
-                    />
-                    <rect
-                      width="1"
-                      height="30"
-                      x="-192"
-                      y="-363"
-                      id="barcode0_bar19"
-                    />
-                    <rect
-                      width="1"
-                      height="38"
-                      x="-190"
-                      y="-363"
-                      id="barcode0_bar21"
-                    />
-                    <rect
-                      width="1"
-                      height="38"
-                      x="-188"
-                      y="-363"
-                      id="barcode0_bar23"
-                    />
-                    <rect
-                      width="1"
-                      height="30"
-                      x="-186"
-                      y="-363"
-                      id="barcode0_bar25"
-                    />
-                    <rect
-                      width="1"
-                      height="30"
-                      x="-181"
-                      y="-363"
-                      id="barcode0_bar27"
-                    />
-                    <rect
-                      width="2"
-                      height="30"
-                      x="-179"
-                      y="-363"
-                      id="barcode0_bar29"
-                    />
-                    <rect
-                      width="2"
-                      height="30"
-                      x="-176"
-                      y="-363"
-                      id="barcode0_bar31"
-                    />
-                    <rect
-                      width="1"
-                      height="30"
-                      x="-172"
-                      y="-363"
-                      id="barcode0_bar33"
-                    />
-                    <rect
-                      width="3"
-                      height="30"
-                      x="-169"
-                      y="-363"
-                      id="barcode0_bar35"
-                    />
-                    <rect
-                      width="1"
-                      height="30"
-                      x="-165"
-                      y="-363"
-                      id="barcode0_bar37"
-                    />
-                    <rect
-                      width="3"
-                      height="30"
-                      x="-163"
-                      y="-363"
-                      id="barcode0_bar39"
-                    />
-                    <rect
-                      width="1"
-                      height="38"
-                      x="-158"
-                      y="-363"
-                      id="barcode0_bar41"
-                    />
-                    <rect
-                      width="1"
-                      height="38"
-                      x="-156"
-                      y="-363"
-                      id="barcode0_bar43"
-                    />
-                  </g>
-                </g>
-              </svg>
-
-            </g>
-
-          </mask>
-        </defs>
-
-        <rect
-          x="0"
-          y="0"
-          mask="url(#mask)"
-          fill="#000"
-        />
-      </svg>
-
+      </div>
     </div>
 
   </main>
@@ -276,47 +78,131 @@
 
 <script>
 import anime from "animejs/lib/anime.es.js";
-import LocomotiveScroll from "locomotive-scroll";
 
 export default {
   data() {
     return {
-      scrollLimit: null,
-      scrollPercentage: null,
       timeline: null,
-      headerText: "Timothy Elliott"
+      headerText: "Where's wally?",
+      transformX: 50,
+      transformY: 50,
+      targetX: 564,
+      targetY: 1406,
+      //Sarcastic squidward
+      // targetX: 1094,
+      // targetY: 1298,
+      range: 50,
+      countdown: "01:00",
+      timerInterval: null,
+      circleRadius: 190,
+      canvas1: null,
+      canvas2: null,
+      gameFinished: false
     };
   },
+  computed: {
+    circleStyles() {
+      return {
+        transform:
+          "translateX(" +
+          this.transformX +
+          "%" +
+          ") translateY(" +
+          this.transformY +
+          "%" +
+          ")"
+      };
+    }
+  },
+  watch: {
+    countdown(newVal) {
+      if (newVal === "00:00") {
+        alert("OVER");
+        this.stopTimer();
+      }
+    }
+  },
   methods: {
-    initScroll() {
-      const scroll = new LocomotiveScroll({
-        el: document.querySelector("#js-scroll")
-        // smooth: true
+    onclick(e) {
+      let background = document.getElementById("background");
+
+      let backgroundElement = background.getBoundingClientRect();
+      let clickX = e.clientX - backgroundElement.left;
+      let clickY = e.clientY - backgroundElement.top;
+
+      console.log("clickX", clickX);
+      console.log("clickY", clickY);
+
+      if (
+        clickX > this.targetX - this.range &&
+        clickX < this.targetX + this.range &&
+        clickY > this.targetY - this.range &&
+        clickY < this.targetY + this.range
+      ) {
+        this.successMessage();
+      }
+    },
+    successMessage() {
+      this.stopTimer();
+
+      this.gameFinished = true;
+
+      document.onmousemove = null;
+
+      let circle = document.getElementById("circle");
+
+      this.triggerConfetti();
+
+      anime({
+        targets: circle,
+        r: this.circleRadius,
+        easing: "easeInOutQuad",
+        duration: 500,
+        complete: anim => {
+          //fire confetti
+          // $this.startTimer(60);
+        }
       });
+    },
+    onmousemove(e) {
+      this.cursorLocation = { x: e.clientX, y: e.clientY };
+
+      let viewportHeight = document.documentElement.clientHeight;
+      let viewportWidth = document.documentElement.clientWidth;
+
+      this.transformX = (this.cursorLocation.x / viewportWidth) * 100;
+      this.transformY = (this.cursorLocation.y / viewportHeight) * 100;
+    },
+    startTimer(duration, display) {
+      var timer = duration,
+        minutes,
+        seconds;
 
       let $this = this;
+      let countdownElement = document.getElementById("countdown");
 
-      scroll.on("scroll", scroll => {
-        // Using modularJS
-        // this.call(...func);
+      this.timerInterval = setInterval(function() {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
 
-        if (this.scrollLimit !== scroll.limit) {
-          this.scrollLimit = scroll.limit;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        $this.countdown = minutes + ":" + seconds;
+
+        countdownElement.textContent = $this.countdown;
+
+        if (--timer < 0) {
+          timer = duration;
         }
-
-        console.log(scroll.scroll.y);
-        console.log(this.scrollLimit);
-
-        this.scrollPercentage = (100 * scroll.scroll.y) / this.scrollLimit;
-
-        this.timeline.seek(
-          (this.scrollPercentage / 100) * this.timeline.duration
-        );
-      });
+      }, 1000);
+    },
+    stopTimer() {
+      clearInterval(this.timerInterval);
     },
     initSVG() {
       let circle = document.getElementById("circle");
-      let pathText = document.getElementById("textPath");
+      let countdown = document.getElementById("countdown");
 
       //Wrap each header letter in a tspan
       let headerText = document.querySelector("#headerText text");
@@ -328,16 +214,10 @@ export default {
 
       let headerTextLetters = document.querySelectorAll(".letter");
 
-      let barcodeBars = document.querySelectorAll("#barcode0 rect");
-
-      console.log(barcodeBars);
-
       //Init timeline
-      this.timeline = anime.timeline({ autoplay: false });
+      this.timeline = anime.timeline({ autoplay: true });
 
-      let circleRadius = 190;
-
-      // let circleBBox = circle.getBBox();
+      let $this = this;
 
       this.timeline
         .add({
@@ -349,44 +229,100 @@ export default {
         })
         .add({
           targets: circle,
-          r: [0, circleRadius],
+          transformX: [0, "50%"],
+          transformY: [0, "50%"],
           easing: "easeInOutQuad",
           duration: 1000
         })
         .add({
-          targets: pathText,
-          opacity: [0, 1],
-          scale: [0, 1],
-          easing: "linear",
-          duration: 300
-        })
-        .add({
-          targets: pathText,
-          rotate: 360,
-          easing: "linear",
-          duration: 10000,
-          offset: "-350"
-        })
-        .add({
-          targets: barcodeBars,
-          // translateX: [200, 0],
-          opacity: [0, 1],
-          easing: "easeOutCubic",
-          duration: 800
-          // offset: "+500"
+          targets: circle,
+          r: [0, this.circleRadius],
+          easing: "easeInOutQuad",
+          duration: 1000
         })
         .add({
           targets: circle,
-          r: [circleRadius, 0],
+          r: [this.circleRadius, this.circleRadius / 2],
           easing: "easeInOutQuad",
           duration: 1000,
-          delay: 1000,
-          offset: "-400"
+          complete: anim => {
+            document.onmousemove = this.onmousemove;
+
+            $this.startTimer(120);
+          }
+        })
+        .add({
+          targets: countdown,
+          opacity: [0, 1],
+          easing: "easeInOutBounce",
+          duration: 500,
+          delay: "+500"
         });
+    },
+    triggerConfetti() {
+      const confetti = require("canvas-confetti");
+
+      this.canvas1 = confetti.create(null, {
+        resize: true
+      });
+
+      this.canvas2 = confetti.create(null, {
+        resize: true
+      });
+
+      this.fireConfetti();
+    },
+    fireConfetti() {
+      if (process.client) {
+        let colors = [
+          "#ffffff",
+          "#00ccbb",
+          "#4050fb",
+          "#fb5058",
+          "#ff9700",
+          "#440063",
+          "#fabe00"
+        ];
+
+        const shuffledColors = colors.sort(() => 0.5 - Math.random());
+
+        this.canvas1({
+          particleCount: 2,
+          angle: 120,
+          spread: 55,
+          zIndex: 20000,
+          origin: {
+            x: 1,
+            y: 1
+          },
+          colors: shuffledColors
+        });
+
+        this.canvas2({
+          particleCount: 2,
+          angle: 60,
+          spread: 55,
+          zIndex: 20000,
+          origin: {
+            x: 0,
+            y: 1
+          },
+          colors: shuffledColors
+        });
+
+        if (!this.confettiTimer) {
+          this.confettiTimer = Date.now() + 600;
+        }
+
+        if (Date.now() < this.confettiTimer) {
+          requestAnimationFrame(this.fireConfetti);
+        }
+      }
     }
   },
   mounted() {
-    this.initScroll();
+    document.onclick = this.onclick;
+
     this.initSVG();
   }
 };

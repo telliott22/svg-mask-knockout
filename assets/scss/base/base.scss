@@ -7,6 +7,12 @@
  */
 html {
   box-sizing: border-box;
+  // overflow: hidden;
+}
+
+html,
+body {
+  // overflow: hidden;
 }
 
 *,
@@ -20,6 +26,7 @@ body {
   opacity: 0;
   animation: 0.5s 0.5s 1 forwards fadeIn;
   background-color: $primary-background;
+
   &.noscroll {
     overflow: hidden;
   }
@@ -27,7 +34,7 @@ body {
 
 #app {
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;÷
   left: 0;
 }
 
@@ -63,8 +70,10 @@ a {
  */
 blockquote {
 }
+
 blockquote:before {
 }
+
 blockquote p {
 }
 
@@ -86,8 +95,10 @@ iframe {
 code,
 pre {
 }
+
 pre code {
 }
+
 pre {
 }
 
