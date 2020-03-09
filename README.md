@@ -1,6 +1,6 @@
 # svg-mask-knockout
 
-> SVG mask knockout effect concept
+> SVG mask knockout effect concept. Scroll for animations
 
 ## Build Setup
 
