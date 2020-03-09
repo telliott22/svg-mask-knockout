@@ -4,6 +4,8 @@
 
 [demo](https://wheres-wally.now.sh/)
 
+[Effect branch demo](https://svg-mask-knockout.now.sh/)
+
 ## Build Setup
 
 ```bash
