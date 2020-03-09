@@ -117,7 +117,7 @@ export default {
   watch: {
     countdown(newVal) {
       if (newVal === "00:00") {
-        alert("OVER");
+        alert("Better luck next time");
         this.stopTimer();
       }
     }
