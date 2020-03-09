@@ -247,6 +247,7 @@ export default {
           duration: 1000,
           complete: anim => {
             document.onmousemove = this.onmousemove;
+            document.ontouchmove = this.onmousemove;
 
             $this.startTimer(120);
           }
