@@ -1,21 +1,30 @@
 .page {
-  height: 500vh;
+  height: 100vh;
+  width: 100vw;
+  // overflow: hidden;
+  position: relative;
+  cursor: none;
+
+  &--game-finished {
+    cursor: initial;
+    // overflow: hidden;
+  }
 
   &__background-container {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    background: url("../images/desert-2.jpg") center;
-    background-size: cover;
+    width: 2000px;
+    height: 2000px;
+    background: url("../images/spongebob.jpg") center;
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: top center;
     margin: auto;
+    // overflow: scroll;
   }
 
   .page__svg-container {
     width: 100vw;
     height: 100vh;
-    position: sticky;
+    position: fixed;
     top: 0;
     // left: 0;
   }
